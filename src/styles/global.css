@@ -1,0 +1,135 @@
+:root {
+  --bg: #0b0b0d;
+  --fg: #e6e6e6;
+  --muted: #a0a0a0;
+  --primary: #7c3aed; /* violet-600 */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111215;
+  border-bottom: 1px solid #1c1c21;
+  padding: 0.75rem 1rem;
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--fg);
+  text-decoration: none;
+  letter-spacing: 0.4px;
+}
+
+.navbar nav a {
+  margin-right: 1rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.navbar nav a.active {
+  color: var(--fg);
+}
+
+.watchlist-badge {
+  background: #1f2937;
+  border: 1px solid #374151;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.page h1, .page h2 {
+  margin-top: 0.25rem;
+}
+
+.primary-btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.searchbar input {
+  background: #141419;
+  border: 1px solid #22222a;
+  color: var(--fg);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+}
+
+.searchbar button, .filter select, button {
+  background: #22222a;
+  color: var(--fg);
+  border: 1px solid #2e2e36;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.center {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.error {
+  color: #f97316;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.detail {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1rem;
+}
+
+.detail img, .placeholder.detail {
+  width: 220px;
+  height: 330px;
+  border-radius: 8px;
+}
