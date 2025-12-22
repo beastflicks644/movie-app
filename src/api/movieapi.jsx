@@ -6,10 +6,10 @@ const baseUrl = process.env.REACT_APP_TMDB_BASE_URL || 'https://api.themoviedb.o
 const imageBase = process.env.REACT_APP_TMDB_IMAGE_BASE || 'https://image.tmdb.org/t/p/w500';
 
 // Toggle to use local JSON if API not set
-const USE_LOCAL = !apiKey;
+//const USE_LOCAL = !apiKey;
 
 export async function fetchPopularMovies(page = 1) {
-  if (USE_LOCAL) {
+  if (!apiKey) {
     return { results: localData.results, total_pages: 1, page: 1 };
   }
   const { data } = await axios.get(`${baseUrl}/movie/popular`, {
@@ -19,7 +19,7 @@ export async function fetchPopularMovies(page = 1) {
 }
 
 export async function searchMovies(query, page = 1) {
-  if (USE_LOCAL) {
+  if (!apiKey) {
     const filtered = localData.results.filter((m) =>
       m.title.toLowerCase().includes(query.toLowerCase())
     );
@@ -32,7 +32,7 @@ export async function searchMovies(query, page = 1) {
 }
 
 export async function fetchMovieById(id) {
-  if (USE_LOCAL) {
+  if (!apiKey) {
     const movie = localData.results.find((m) => String(m.id) === String(id));
     return movie || null;
   }
