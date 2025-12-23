@@ -7,7 +7,7 @@ export default function Home() {
       <h1>Welcome to CineScope</h1>
       <p>
         Discover popular movies, search titles, filter by genre, and manage your watchlist.
-        Built with React, Hooks, Context, Routing, HOC, and CSS Modules.
+        
       </p>
       <Link className="primary-btn" to="/movies">Explore Movies</Link>
     </section>

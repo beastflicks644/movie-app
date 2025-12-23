@@ -5,9 +5,7 @@ export default function About() {
     <section className="page">
       <h2>About</h2>
       <p>
-        CineScope is a React-based movie listing app demonstrating components, props/state, hooks,
-        routing, HOCs, CSS modules, and Context API for a watchlist. Data can be fetched from TMDb
-        or local JSON for offline evaluation.
+        CineScope is your gateway to the world of cinema. Designed for movie enthusiasts, it lets you explore trending titles, search for your favorites, filter by genre, and curate a personalized watchlist. Built with React and powered by modern web technologies like Hooks, Context API, Routing, Higher-Order Components, and CSS Modules, CineScope delivers a smooth and responsive user experience. Whether you're discovering new releases or revisiting classics, CineScope makes movie browsing intuitive and enjoyable.
       </p>
     </section>
   );
